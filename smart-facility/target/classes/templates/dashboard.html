@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Smart Facility</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script defer th:src="@{/js/app.js}"></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => setActiveNav("/dashboard"));
+    </script>
+</head>
+<body>
+<header class="header">
+    <div class="brand">Smart Facility</div>
+    <nav class="nav">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/spaces">Spaces</a>
+        <a href="/bookings">Bookings</a>
+        <a href="/tickets">Tickets</a>
+        <a href="/swagger-ui/index.html" target="_blank">API Docs</a>
+        <a href="/auth/logout">Logout</a>
+    </nav>
+</header>
+<main class="page">
+    <div class="grid cols-2">
+        <div class="card">
+            <h2>Spaces</h2>
+            <p class="muted">Manage rooms, capacity, and features.</p>
+            <a class="btn btn-primary" href="/spaces">Open spaces</a>
+        </div>
+        <div class="card">
+            <h2>Bookings</h2>
+            <p class="muted">Create and approve bookings with filters & pagination.</p>
+            <a class="btn btn-primary" href="/bookings">Open bookings</a>
+        </div>
+        <div class="card">
+            <h2>Maintenance</h2>
+            <p class="muted">Track tickets, priorities, statuses, and attachments.</p>
+            <a class="btn btn-primary" href="/tickets">Open tickets</a>
+        </div>
+        <div class="card">
+            <h2>API & Docs</h2>
+            <p class="muted">OpenAPI with Swagger UI; session/CSRF ready.</p>
+            <a class="btn btn-ghost" href="/swagger-ui/index.html" target="_blank">View Swagger</a>
+        </div>
+    </div>
+    <p class="footer">Signed in as <span th:text="${#authentication?.name}"></span></p>
+</main>
+</body>
+</html>
