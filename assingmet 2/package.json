@@ -1,0 +1,13 @@
+{
+  "name": "assingmet-2-node",
+  "version": "1.0.0",
+  "private": true,
+  "description": "POST to GET name greeting assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
