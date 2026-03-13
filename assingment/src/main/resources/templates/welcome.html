@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Greeting</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main class="page-wrap">
+        <section class="card card-small">
+            <h1 th:text="${#strings.isEmpty(name) ? 'Hello!' : 'Hello, ' + name + '!'}"></h1>
+            <p class="subtitle">Your name was received by POST, then shown here with GET.</p>
+            <a href="/" class="link-button">Go Back</a>
+        </section>
+    </main>
+</body>
+</html>

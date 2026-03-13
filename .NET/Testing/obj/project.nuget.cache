@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GMWp46wF/C8=",
+  "dgSpecHash": "08nUKgN5Ctw=",
   "success": true,
   "projectFilePath": "E:\\.VS-CODE-INSIDERS\\.NET\\Testing\\Testing.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sachi\\.nuget\\packages\\microsoft.netcore.app.ref\\10.0.3\\microsoft.netcore.app.ref.10.0.3.nupkg.sha512",
+    "C:\\Users\\sachi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\10.0.3\\microsoft.windowsdesktop.app.ref.10.0.3.nupkg.sha512",
+    "C:\\Users\\sachi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\10.0.3\\microsoft.aspnetcore.app.ref.10.0.3.nupkg.sha512",
+    "C:\\Users\\sachi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\10.0.3\\microsoft.netcore.app.host.win-x64.10.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Greeting</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main class="page-wrap">
+        <section class="card">
+            <h1>Welcome</h1>
+            <p class="subtitle">Please enter your name to receive a greeting.</p>
+
+            <p th:if="${error}" class="error" th:text="${error}"></p>
+
+            <form method="post" action="/submit" class="form-block">
+                <label for="name" class="sr-only">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="input"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                    required
+                >
+                <button type="submit" class="button">Get Greeting</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
