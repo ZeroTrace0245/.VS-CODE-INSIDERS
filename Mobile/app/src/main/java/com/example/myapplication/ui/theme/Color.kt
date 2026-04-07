@@ -17,10 +17,14 @@ val WarmOrange = Color(0xFFFF9800)
 val MindfulPurple = Color(0xFF9C27B0)
 val EmergencyRed = Color(0xFFF44336)
 
+// MediPlus Brand Colors
+val MediPlusBlue = Color(0xFF40C4FF)
+val MediPlusDark = Color(0xFF1A242F)
+
 // Gradients
 val primaryGradient = listOf(
-    Color(0xFF667eea),
-    Color(0xFF764ba2)
+    Color(0xFF40C4FF),
+    Color(0xFF1E3C72)
 )
 
 val calmGradient = listOf(

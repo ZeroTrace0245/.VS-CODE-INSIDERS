@@ -23,6 +23,7 @@ fun HealthProfileEditScreen(
     
     // Personal Info
     var name by remember { mutableStateOf(initialRecord.personalInfo.name) }
+    var mobileNumber by remember { mutableStateOf(initialRecord.personalInfo.mobileNumber) }
     var age by remember { mutableStateOf(initialRecord.personalInfo.age.toString()) }
     var dateOfBirth by remember { mutableStateOf(initialRecord.personalInfo.dateOfBirth) }
     var bloodType by remember { mutableStateOf(initialRecord.bloodType) }
@@ -52,12 +53,19 @@ fun HealthProfileEditScreen(
                 },
                 actions = {
                     IconButton(onClick = {
+                        if (name.isBlank() || bloodType.isBlank() || ecName.isBlank() || ecPhone.isBlank()) {
+                            // Basic validation toast could be added here if context was available
+                            // For now, we'll just prevent saving if mandatory fields are missing
+                            return@IconButton
+                        }
+
                         val updatedRecord = initialRecord.copy(
                             profileName = profileName,
                             personalInfo = PersonalInfo(
                                 name = name, 
                                 age = age.toIntOrNull() ?: 0,
-                                dateOfBirth = dateOfBirth
+                                dateOfBirth = dateOfBirth,
+                                mobileNumber = mobileNumber
                             ),
                             bloodType = bloodType,
                             allergies = allergies.split(",").map { it.trim() }.filter { it.isNotEmpty() },
@@ -95,6 +103,13 @@ fun HealthProfileEditScreen(
                 value = name,
                 onValueChange = { name = it },
                 label = { Text("Full Name") },
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            OutlinedTextField(
+                value = mobileNumber,
+                onValueChange = { mobileNumber = it },
+                label = { Text("Mobile Number") },
                 modifier = Modifier.fillMaxWidth()
             )
 

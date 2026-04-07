@@ -7,8 +7,8 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(
-    entities = [HealthRecord::class, JournalEntry::class, WellnessMetric::class],
-    version = 1,
+    entities = [HealthRecord::class, JournalEntry::class, WellnessMetric::class, Appointment::class],
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -16,6 +16,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun healthRecordDao(): HealthRecordDao
     abstract fun journalEntryDao(): JournalEntryDao
     abstract fun wellnessMetricDao(): WellnessMetricDao
+    abstract fun appointmentDao(): AppointmentDao
 
     companion object {
         @Volatile
@@ -27,7 +28,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "health_wellbeing_db"
-                ).build().also { instance = it }
+                )
+                .fallbackToDestructiveMigration()
+                .build().also { instance = it }
             }
         }
     }

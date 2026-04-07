@@ -26,7 +26,8 @@ data class HealthRecord(
 data class PersonalInfo(
     val name: String = "",
     val age: Int = 0,
-    val dateOfBirth: String = ""
+    val dateOfBirth: String = "",
+    val mobileNumber: String = ""
 )
 
 @Serializable
