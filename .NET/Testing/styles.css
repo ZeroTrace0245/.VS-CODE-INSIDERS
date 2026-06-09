@@ -37,17 +37,11 @@ a{color:#0b66c3}
   .container{box-shadow:none;border:0}
 }
 
-/* Skill bars and spacing for expanded sections */
+/* Skill list (human-friendly labels) */
 .skill-list{display:flex;flex-direction:column;gap:10px}
 .skill-item{display:flex;flex-direction:column}
 .skill-name{font-size:13px;color:var(--accent);margin-bottom:6px}
-.skill-level{height:10px;background:var(--line);border-radius:6px;position:relative;overflow:hidden}
-.skill-level::after{content:"";position:absolute;left:0;top:0;height:100%;width:40%;background:linear-gradient(90deg,#0b66c3,#2a9df4);border-radius:6px}
-.skill-level[data-level="90"]::after{width:90%}
-.skill-level[data-level="75"]::after{width:75%}
-.skill-level[data-level="70"]::after{width:70%}
-.skill-level[data-level="65"]::after{width:65%}
-.skill-level[data-level="60"]::after{width:60%}
+.skill-proficiency{font-size:13px;color:var(--muted);font-style:italic}
 
 .content h2{margin-top:0}
 .content ul{padding-left:18px;color:var(--muted)}
