@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": ".VS-CODE-INSIDERS",
+			"path": ".."
+		},
+		{
+			"name": "htdocs",
+			"path": "C:/xampp/htdocs"
+		},
+		{
+			"path": "../../GNU"
+		},
+		{
+			"path": "../../Jupyter"
+		},
+		{
+			"path": "../../test"
+		},
+		{
+			"path": "../../../VS studio/Fullstakes"
+		}
+	]
+}
